@@ -7,7 +7,7 @@ $altura = readline("$name, favor informar sua altura em CM: ");
 
 $imc = $peso / pow($altura / 100, 2);
 
-echo "Seu IMC é: " . number_format($imc) . "\n";
+echo "$name, seu IMC é: " . number_format($imc) . "\n";
 
 $mensagens = [
     18.5 => "Você está abaixo do peso.",
