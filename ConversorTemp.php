@@ -13,13 +13,13 @@ if ($opcao == 1) {
     // Celsius para Fahrenheit
     echo "Digite a temperatura em graus Celsius: ";
     $celsius = trim(fgets(STDIN));
-    $fahrenheit = ($celsius * 9/5) + 32;
+    $fahrenheit = ($celsius * 9 / 5) + 32;
     echo "A temperatura em Fahrenheit é: " . number_format($fahrenheit, 2) . " °F\n";
 } elseif ($opcao == 2) {
     // Fahrenheit para Celsius
     echo "Digite a temperatura em graus Fahrenheit: ";
     $fahrenheit = trim(fgets(STDIN));
-    $celsius = ($fahrenheit - 32) * 5/9;
+    $celsius = ($fahrenheit - 32) * 5 / 9;
     echo "A temperatura em Celsius é: " . number_format($celsius, 2) . " °C\n";
 } else {
     // Opção inválida
