@@ -1,28 +1,22 @@
-<?php
-echo "Sistema de Cálculo de IMC\n\n";
-
-$name = readline("Qual seu nome? :");
-$peso = readline("$name, favor informar seu peso em KG: ");
-$altura = readline("$name, favor informar sua altura em CM: ");
-
-$imc = $peso / pow($altura / 100, 2);
-
-echo "$name, seu IMC é: " . number_format($imc) . "\n";
-
-$mensagens = [
-    18.5 => "Você está abaixo do peso.",
-    25 => "Seu peso está dentro do normal.",
-    30 => "Você está com sobrepeso.",
-    35 => "Você está com obesidade grau I.",
-    40 => "Você está com obesidade grau II (severa).",
-    INF => "Você está com obesidade grau III (mórbida).",
-];
-
-foreach ($mensagens as $limite => $mensagem) {
-    if ($imc < $limite) {
-        break;
-    }
-}
-
-echo $mensagem;
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Cálculo de IMC</title>
+</head>
+<body>
+<h1>Sistema de Cálculo de IMC</h1>
+<form method="post" action="Calculo_IMC.php">
+    <label for="name">Qual seu nome?</label>
+    <input type="text" name="name" id="name" required>
+    <br><br>
+    <label for="peso">Favor informar seu peso em KG:</label>
+    <input type="number" name="peso" id="peso" min="0" step="0.01" required>
+    <br><br>
+    <label for="altura">Favor informar sua altura em CM:</label>
+    <input type="number" name="altura" id="altura" min="0" step="0.01" required>
+    <br><br>
+    <input type="submit" value="Calcular">
+</form>
+</body>
+</html>

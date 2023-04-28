@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="PT-BR">
 <head>
     <title>Churrascômetro</title>
     <style>
@@ -71,7 +71,7 @@
         input[type="submit"]:hover {
             background-color: #3e8e41;
         }
-        
+
 
         .result h2 {
             margin-top: 0;
@@ -102,3 +102,39 @@
 </form>
 </body>
 </html>
+<?php
+$adultos = $_POST['adultos'];
+$criancas = $_POST['criancas'];
+$cerveja = $_POST['cerveja'];
+$refrigerante = $_POST['refrigerante'];
+$suco = $_POST['suco'];
+
+function carne($adultos, $criancas)
+{
+    $carne1 = $adultos * 0.400;
+    $carne2 = $criancas * 0.150;
+
+    return $carne1 + $carne2;
+}
+
+function bebidas($cerveja, $refrigerante, $suco)
+{
+    $latas = $cerveja * 4;
+    $refrigerantes = $refrigerante * 1;
+    $sucos = $suco * 0.700;
+
+    return [$latas, $refrigerantes, $sucos];
+}
+
+if ($adultos) {
+    echo "<div style='background-color: #f5f5f5; padding: 20px;'>";
+    echo "<h2 style='margin-bottom: 10px;'>Resultado</h2>";
+    list($total_cervejas, $total_refrigerantes, $total_sucos) = bebidas($cerveja, $refrigerante, $suco);
+    echo "<p style='margin-bottom: 5px;'>Total de latas de cerveja: $total_cervejas</p>";
+    echo "<p style='margin-bottom: 5px;'>Total de refrigerantes: $total_refrigerantes Litros</p>";
+    echo "<p style='margin-bottom: 5px;'>Total de suco em litros: $total_sucos Litros</p>";
+    $total_carne = carne($adultos, $criancas);
+    echo "<p style='margin-bottom: 5px;'>Total de Carne: $total_carne Kg</p>";
+    echo "</div>";
+}
+?>
