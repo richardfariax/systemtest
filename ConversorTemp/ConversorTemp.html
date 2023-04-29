@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<link href='../styles/style.css' rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Conversor de temperatura</title>
+</head>
+<body>
+<h1>Sistema Conversor de temperatura</h1>
+
+<form action="..\ConversorTemp\ConversorTemp.php" method="post">
+    <p>
+        Escolha o tipo de conversão:<br>
+        <label>
+            <input name="opcao" type="radio" value="1">
+        </label> Celsius para Fahrenheit<br>
+      <label>
+        <input name="opcao" type="radio" value="2">
+      </label> Fahrenheit para Celsius<br>
+    </p>
+    <p>
+        Insira a temperatura: <label>
+      <input name="temperatura" required step="0.01" type="number">
+    </label>
+    </p>
+    <p>
+        <input type="submit" value="Converter">
+    </p>
+</form>
+</body>

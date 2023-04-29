@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+<link rel="stylesheet" href='../styles/style.css'>
 <head>
     <meta charset="UTF-8">
     <title>Sistema de Cálculo de IMC</title>
 </head>
 <body>
 <h1>Sistema de Cálculo de IMC</h1>
-<form method="post" action="Calculo_IMC.php">
+<form method="post" action="..\IMC\Calculo_IMC.php">
     <label for="name">Qual seu nome?</label>
-    <input type="text" name="name" id="name" required>
+    <input type="number" name="name" id="name" required>
     <br><br>
     <label for="peso">Favor informar seu peso em KG:</label>
     <input type="number" name="peso" id="peso" min="0" step="0.01" required>

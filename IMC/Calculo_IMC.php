@@ -16,6 +16,7 @@ $mensagens = [
     INF => "Você está com obesidade grau III (mórbida).",
 ];
 
+
 foreach ($mensagens as $limite => $mensagem) {
     if ($imc < $limite) {
         break;
