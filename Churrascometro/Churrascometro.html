@@ -9,18 +9,45 @@
 </head>
 <body>
 <h1>Churrascômetro</h1>
-<form method="post" action="..\Churrascometro\Calcular.php">
+<form method="post" action="..\Churrascometro\Calcular.php" onsubmit="return validateForm()">
     <label for="adultos">Quantos adultos?</label>
-    <input type="number" name="adultos" id="adultos" required>
+    <input type="number" min="0" name="adultos" id="adultos" required onchange="updateMaxBebem()">
     <label for="criancas">Quantas crianças?</label>
-    <input type="number" name="criancas" id="criancas" required>
+    <input type="number" min="0" name="criancas" id="criancas" required>
     <label for="cerveja">Quantos bebem cerveja?</label>
-    <input type="number" name="cerveja" id="cerveja" required>
+    <input type="number" min="0" name="cerveja" id="cerveja" required max="0">
     <label for="refrigerante">Quantos tomam refrigerante?</label>
-    <input type="number" name="refrigerante" id="refrigerante" required>
+    <input type="number" min="0" name="refrigerante" id="refrigerante" required>
     <label for="suco">Quantos tomam suco?</label>
-    <input type="number" name="suco" id="suco" required>
+    <input type="number" min="0" name="suco" id="suco" required>
     <input type="submit" value="Calcular">
 </form>
+<script>
+    function updateMaxBebem() {
+        var adultosInput = document.getElementById("adultos");
+        var cervejaInput = document.getElementById("cerveja");
+        cervejaInput.max = adultosInput.value;
+    }
+
+    function validateForm() {
+        var adultosInput = parseInt(document.getElementById("adultos").value);
+        var criancasInput = parseInt(document.getElementById("criancas").value);
+        var cervejaInput = parseInt(document.getElementById("cerveja").value);
+        var refrigeranteInput = parseInt(document.getElementById("refrigerante").value);
+        var sucoInput = parseInt(document.getElementById("suco").value);
+        var totalBebidas = cervejaInput + refrigeranteInput + sucoInput;
+
+        if (adultosInput + criancasInput !== totalBebidas) {
+            alert("A quantidade pessoas não corresponde à quantidade total de bebidas informada!");
+            return false;
+        }
+        if (cervejaInput > adultosInput) {
+            alert("A quantidade de cerveja informada é maior do que a quantidade de adultos!");
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </body>
 </html>
