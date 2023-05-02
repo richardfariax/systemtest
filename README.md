@@ -7,8 +7,11 @@ Clone o repositório:
 
 ```bash
   git clone https://github.com/richardfariax/systemtest.git
+
 ```
-Abra o arquivo index.html em seu navegador.
+Coloque o projeto no laragon
+
+Abra em seu navegador `````http://localhost/systemtest/`````
 
 Selecione uma das opções disponíveis no menu suspenso.
 
