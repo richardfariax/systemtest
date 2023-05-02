@@ -54,35 +54,48 @@ select {
     transition: all 0.3s ease;
 }
 select:hover {
-    background-color: #f7f7f7;
+    transition: all 1s ease;
+    background-color: rgba(0, 164, 226, 0.04);
 }
 input[type="button"] {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0px 0px 4px #000000;
+    box-shadow: 1px 1px 1px rgba(190, 226, 249, 0.3);
+    padding: 10px;
+    margin-top: 9px;
     width: 100%;
-    margin-bottom: fill;
-    font-size: 1.1em;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: #4CAF50;
-    color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: 0px solid #3866A3;
+    background: #00A2E0;
+    background: linear-gradient(to top, #00A2E0, #007CB4);
+}
+input[type="button"]:hover {
+    color: #ffffff !important;
+    background: #007CB4;
+    background: linear-gradient(to top, #007CB4, #00A2E0);
 }
 input[type="submit"] {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0px 0px 4px #000000;
+    box-shadow: 1px 1px 1px #BEE2F9;
     padding: 10px;
+    margin-top: 9px;
     width: 100%;
-    margin-top: 10px;
-    font-size: 1.1em;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: #4CAF50;
-    color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    border: 0px solid #3866A3;
+    background: #00A2E0;
+    background: linear-gradient(to top, #00A2E0, #007CB4);
 }
-button[type="submit"]:hover {
-    background-color: #3e8e41;
+input[type="submit"]:hover {
+    color: #ffffff !important;
+    background: #007CB4;
+    background: linear-gradient(to top, #007CB4, #00A2E0);
 }
 form {
     width: 40%;
@@ -107,7 +120,7 @@ input[type="number"] {
     outline: none;
 }
 input[type="number"]:focus {
-    border-color: #4CAF50;
+    border-color: #00A2E0;
 }
 input[type="text"] {
     padding: 10px;
@@ -120,7 +133,7 @@ input[type="text"] {
     outline: none;
 }
 input[type="text"]:focus {
-    border-color: #4CAF50;
+    border-color: #00A2E0;
 }
 /* Rodapé */
 footer {
