@@ -1,3 +1,7 @@
+/* Definições gerais */
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #f7f7f7;
@@ -5,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* Cabeçalho */
 header {
     display: flex;
     justify-content: center;
@@ -15,27 +19,30 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 0 20px;
 }
-
 header img {
     max-height: 60%;
     max-width: 100%;
 }
-
+/* Conteúdo principal */
+label {
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+}
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2em;
 }
-
 h1 {
     text-align: center;
     margin-top: 20px;
     font-size: 28px;
     color: #333;
 }
-
 select {
+    width: 60%;
     padding: 10px 20px;
     font-size: 1.1em;
     border-radius: 10px;
@@ -46,14 +53,12 @@ select {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 select:hover {
     background-color: #f7f7f7;
 }
-
-input[type="submit"] {
-    padding: 10px 20px;
-    margin-top: 2em;
+input[type="button"] {
+    width: 100%;
+    margin-bottom: fill;
     font-size: 1.1em;
     border-radius: 10px;
     border: none;
@@ -63,51 +68,22 @@ input[type="submit"] {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
-input[type="submit"]:hover {
-    background-color: #3e8e41;
-}
-
-footer {
-    background-color: #333;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    min-width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-}
-
-footer a {
+input[type="submit"] {
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #4CAF50;
     color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0 10px;
-    border-radius: 5px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
-
-footer a:hover {
-    background-color: #000000;
-    color: #333;
+button[type="submit"]:hover {
+    background-color: #3e8e41;
 }
-
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 28px;
-    color: #333;
-}
-
 form {
     width: 40%;
     margin: 20px auto;
@@ -115,20 +91,11 @@ form {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 40px;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
-    width: 100%;
-}
-
 input[type="number"] {
     padding: 10px;
     font-size: 16px;
@@ -139,7 +106,9 @@ input[type="number"] {
     transition: border-color 0.3s ease;
     outline: none;
 }
-
+input[type="number"]:focus {
+    border-color: #4CAF50;
+}
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
@@ -150,37 +119,29 @@ input[type="text"] {
     transition: border-color 0.3s ease;
     outline: none;
 }
-
-input[type="number"]:focus {
+input[type="text"]:focus {
     border-color: #4CAF50;
 }
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+/* Rodapé */
+footer {
+    background-color: #333;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+footer a {
     color: #fff;
-    border: none;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 10px;
     border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    outline: none;
-    margin: 0 auto;
-    display: block;
+    transition: all 0.3s ease;
 }
-
-input[type="submit"]:hover {
-    background-color: #3e8e41;
-}
-
-
-.result h2 {
-    margin-top: 0;
-    font-size: 20px;
+footer a:hover {
+    background-color: #000000;
     color: #333;
-}
-
-.result p {
-    margin-bottom: 20px;
-    color: #666;
 }

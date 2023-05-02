@@ -12,7 +12,7 @@ if (!isset($_POST['opcao'])) {
             require('..\ConversorTemp\ConversorTemp.html');
             break;
         case 3:
-            require('..\IMC\IMC.php');
+            require('..\IMC\IMC.html');
             break;
         case 4:
             require('..\Churrascometro\Churrascometro.html');

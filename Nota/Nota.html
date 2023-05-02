@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <link rel="stylesheet" href='../styles/style.css'>
+<header>
+  <img src="../Index/logo.png" alt="HighSoft Sistemas">
+</header>
 <head>
   <meta charset="UTF-8">
   <title>Sistema de Cálculo de Média</title>
@@ -8,11 +11,27 @@
 <body>
 <h1>Sistema de Cálculo de Média</h1>
 <form action="..\Nota\Nota.php" method="post">
-  <label for="name">Qual é o seu nome?</label>
-  <input type="text" name="name" id="name" required><br><br>
-  <label for="nota">Insira uma nota (0-10) ou digite 'sair' para sair:</label>
-  <input type="text" name="nota" id="nota" required><br><br>
-  <input type="submit" value="Calcular">
+  <div>
+    <label for="name">Qual é o seu nome?</label>
+    <input type="text" name="name" id="name" required><br><br>
+    <div id="notas-container">
+      <label for="nota">Insira uma nota:</label>
+      <input type="text" id="nota" name="nota[]" required><br><br>
+    </div>
+    <input type="button" value="+" onclick="adicionarNota()"><br><br>
+    <input type="submit" value="Calcular">
+  </div>
 </form>
+<script>
+  function adicionarNota() {
+    var notasContainer = document.getElementById("notas-container");
+    var novaNota = document.createElement("div");
+    novaNota.innerHTML = `
+      <label for="nota">Insira uma nota:</label>
+      <input type="text" name="nota[]" required><br><br>
+    `;
+    notasContainer.appendChild(novaNota);
+  }
+</script>
 </body>
 </html>
